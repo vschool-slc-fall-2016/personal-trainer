@@ -11,18 +11,20 @@ var port = process.env.PORT || 9000;
 
 app.use(bodyParser.json());
 app.use(morgan("dev"));
-app.use(express.static(path.join(_dirname, "public")));
+app.use(express.static(path.join(__dirname, "..", "public")));
 
 mongoose.connect(config.database, function (err) {
     if (err) throw (err);
     console.log("Successfully connected to the database.");
 });
 
-app.use("/api", expressJwt({secret: config.secret}));
-app.use("/api/clients", require("./routes/clientRoutes"));
-app.use("/api/workouts", require("./routes/workoutRoutes"));
-app.use("/api/meals", require("./routes/mealRoutes"));
-app.use("/auth", require("./routes/authRoutes"));
+//app.use("/auth", require("./routes/authRoutes"));
+app.use("/blog", require("./routes/blog-routes"));
+
+//app.use("/api", expressJwt({secret: config.secret}));
+//app.use("/api/clients", require("./routes/clientRoutes"));
+//app.use("/api/workouts", require("./routes/workoutRoutes"));
+//app.use("/api/meals", require("./routes/mealRoutes"));
 
 app.listen(port, function () {
     console.log("Server is listening on port " + port);

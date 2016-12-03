@@ -6,6 +6,10 @@ app.config(["$routeProvider", function($routeProvider){
             templateUrl: "js/components/landing-page/landing-page.html",
             controller: "LandingPageController"
         })
+        .when("/blog/", {
+            templateUrl: "js/components/blog/blog.html",
+            controller: "BlogController"
+        })
         .otherwise("/", {
             templateUrl: "js/components/landing-page/landing-page.html",
             controller: "LandingPageController"
