@@ -1,0 +1,28 @@
+{
+  "name": "personal-trainer",
+  "version": "1.0.0",
+  "description": "Web platform to unite personal trainers and clients",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/vschool-slc-fall-2016/personal-trainer.git"
+  },
+  "author": "Tyson Williams, Steven Moss, Jacob Percival",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vschool-slc-fall-2016/personal-trainer/issues"
+  },
+  "homepage": "https://github.com/vschool-slc-fall-2016/personal-trainer#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "express-jwt": "^5.1.0",
+    "jsonwebtoken": "^7.1.9",
+    "mongoose": "^4.7.1",
+    "morgan": "^1.7.0"
+  }
+}

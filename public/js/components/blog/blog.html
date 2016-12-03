@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="post" ng-repeat="post in posts">
+                <h3>{{ post.title }}</h3>
+                <h4>{{ post.author }}</h4>
+                <h6>{{ post.date }}</h6>
+                <p>{{ post.body }}</p>
+                <div ng-repeat="comment in post.comments">
+                    <h5>{{ comment.author }}</h5>
+                    <h6>{{ comment.date }}</h6>
+                    <p>{{ comment.body }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
