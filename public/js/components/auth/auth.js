@@ -28,7 +28,7 @@ app.service("UserService", ["$http", "TokenService", function ($http, TokenServi
         return !!TokenService.getToken();
     };
     this.getUsers = function () {
-        return $http.get("/api/users").then(function (response) {
+        return $http.get("/auth/users").then(function (response) {
             return response.data;
         }, function (response) {
             console.log("Error " + response.status + ": " + response.statusText);
