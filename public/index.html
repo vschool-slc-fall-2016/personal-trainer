@@ -1,22 +1,39 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="main">
+
 <head>
     <meta charset="UTF-8">
     <title>Personal Trainer</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
-    
+
+    <navbar></navbar>
+
     <ng-view></ng-view>
-    
+
+    <!-- Third Party -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-route.js"></script>
+    
+    <!-- Main App -->
     <script src="js/app.js"></script>
+    <script src="js/components/navbar/navbar.js"></script>
+    <script src="js/components/user/user.js"></script>
     <script src="js/components/landing-page/landing-page-controller.js"></script>
     <script src="js/components/services/blog-service.js"></script>
     <script src="js/components/blog/blog-controller.js"></script>
+
+    <!-- Auth -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.11/ngStorage.js"></script>
+    <script src="js/components/auth/auth.js"></script>
+    <script src="js/components/auth/signup/signup.js"></script>
+    <script src="js/components/auth/login/login.js"></script>
+    <script src="js/components/auth/logout/logout.js"></script>
 </body>
+
 </html>

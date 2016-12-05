@@ -1,12 +1,12 @@
-var app = angular.module("main", ["ngRoute"]);
+var app = angular.module("main", ["ngRoute", "Auth"]);
 
-app.config(["$routeProvider", function($routeProvider){
+app.config(["$routeProvider", function ($routeProvider) {
     $routeProvider
         .when("/", {
             templateUrl: "js/components/landing-page/landing-page.html",
             controller: "LandingPageController"
         })
-        .when("/blog/", {
+        .when("/blog", {
             templateUrl: "js/components/blog/blog.html",
             controller: "BlogController"
         })
@@ -14,4 +14,4 @@ app.config(["$routeProvider", function($routeProvider){
             templateUrl: "js/components/landing-page/landing-page.html",
             controller: "LandingPageController"
         })
-}])
+}]);
