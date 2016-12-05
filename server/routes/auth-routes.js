@@ -13,7 +13,7 @@ authRouter.post("/signup", function (req, res) {
             return res.status(400).send({success: false, message: "That username is already taken"});
         }
         var user = new User(req.body);
-        User.save(function (err, newUser) {
+        user.save(function (err, newUser) {
             if (err) return res.status(500).send(err);
             return res.send({success: true, message: "Signed up a new user", user: newUser});
         });

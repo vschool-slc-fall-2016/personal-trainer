@@ -18,11 +18,11 @@ mongoose.connect(config.database, function (err) {
     console.log("Successfully connected to the database.");
 });
 
-//app.use("/auth", require("./routes/auth-routes"));
+app.use("/auth", require("./routes/auth-routes"));
 app.use("/blog", require("./routes/blog-routes"));
 
 app.use("/api", expressJwt({secret: config.secret}));
-//app.use("/api/users", require("./routes/user-routes"));
+app.use("/api/users", require("./routes/user-routes"));
 //app.use("/api/workouts", require("./routes/workout-routes"));
 //app.use("/api/meals", require("./routes/meal-routes"));
 
