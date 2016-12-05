@@ -54,6 +54,20 @@ app.service("AuthInterceptor", ["$q", "$location", "TokenService", function ($q,
     };
 }]);
 
-app.config(function ($httpProvider) {
+app.config(["$httpProvider", "$routeProvider", function ($httpProvider, $routeProvider) {
+    $routeProvider
+        .when("/signup", {
+            templateUrl: "js/components/auth/signup/signup.html",
+            controller: "SignupController"
+        })
+        .when("/login", {
+            templateUrl: "js/components/auth/login/login.html",
+            controller: "LoginController"
+        })
+        .when("/logout", {
+            template: "",
+            controller: "LogoutController"
+        })
+    
     $httpProvider.interceptors.push("AuthInterceptor");
-});
+}]);

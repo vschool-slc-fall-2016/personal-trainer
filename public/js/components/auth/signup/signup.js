@@ -1,6 +1,6 @@
 var app = angular.module("Auth");
 
-app.controller("UserController", ["$scope", "$location", "UserService", function ($scope, $location, UserService) {
+app.controller("SignupController", ["$scope", "$location", "UserService", function ($scope, $location, UserService) {
     $scope.passwordMessage = "";
     $scope.signup = function (user) {
         if ($scope.user.password !== $scope.passwordRepeat) {
