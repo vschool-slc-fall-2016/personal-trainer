@@ -22,8 +22,7 @@ app.config(["$routeProvider", function ($routeProvider) {
             templateUrl: "js/components/about/about.html",
             controller: "AboutController"
         })
-        .otherwise("/", {
-            templateUrl: "js/components/landing-page/landing-page.html",
-            controller: "LandingPageController"
+        .otherwise({
+            redirectTo: "/"
         })
 }]);
