@@ -27,13 +27,14 @@ app.service("UserService", ["$http", "TokenService", function ($http, TokenServi
     this.isAuthenticated = function () {
         return !!TokenService.getToken();
     };
-    this.getUsers = function () {
-        return $http.get("/auth/users").then(function (response) {
-            return response.data;
-        }, function (response) {
-            console.log("Error " + response.status + ": " + response.statusText);
-        });
-    };
+//    this.getUsers = function () {
+//        return $http.get("/auth/users").then(function (response) {
+//            return response.data;
+//        }, function (response) {
+//            console.log("Error " + response.status + ": " + response.statusText);
+//        });
+//    };
+    
 }]);
 
 app.service("AuthInterceptor", ["$q", "$location", "TokenService", function ($q, $location, TokenService) {
@@ -68,6 +69,6 @@ app.config(["$httpProvider", "$routeProvider", function ($httpProvider, $routePr
             template: "",
             controller: "LogoutController"
         })
-    
+
     $httpProvider.interceptors.push("AuthInterceptor");
 }]);

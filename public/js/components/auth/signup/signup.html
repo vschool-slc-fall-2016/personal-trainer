@@ -19,6 +19,56 @@
                 <span class="text-danger" ng-show="passwordMessage">{{passwordMessage}}</span>
             </div>
             
+            <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" class="form-control" ng-model="user.firstName">
+            </div>
+
+            <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" class="form-control" ng-model="user.lastName">
+            </div>
+
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input type="number" id="age" class="form-control" ng-model="user.age">
+            </div>
+
+            <div class="form-group">
+                <label>Gender</label><br>
+                <label class="radio-inline">
+                    <input type="radio" name="gender" ng-model="user.gender" ng-value="male" checked><p>Male</p>
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" name="gender" ng-model="user.gender" ng-value="female"><p>Female</p>
+                </label>
+            </div>
+
+            <div class="form-group">
+                <label for="height">Height (in inches)</label>
+                <input type="number" id="height" class="form-control" ng-model="user.height">
+            </div>
+
+            <div class="form-group">
+                <label for="weight">Weight</label>
+                <input type="text" id="weight" class="form-control" ng-model="user.weight">
+            </div>
+
+            <div class="form-group">
+                <label for="phoneNumber">Phone Number</label>
+                <input type="number" id="phoneNumber" class="form-control" ng-model="user.phoneNumber">
+            </div>
+
+            <div class="form-group">
+                <label for="address">Address</label>
+                <input type="text" id="address" class="form-control" ng-model="user.address">
+            </div>
+
+            <div class="form-group">
+                <label for="foodAllergies">Food Allergies</label>
+                <input type="text" id="foodAllergies" class="form-control" ng-model="user.foodAllergies">
+            </div>
+            
             <button class="center-block btn btn-primary btn-lg" ng-click="signup(user)">Signup</button>
             
         </form>
