@@ -6,20 +6,27 @@ app.config(["$routeProvider", function ($routeProvider) {
             templateUrl: "js/components/landing-page/landing-page.html",
             controller: "LandingPageController"
         })
-        .when("/login", {
-            templateUrl: "js/components/auth/login/login.html",
-            controller: "LoginController"
-        })
         .when("/blog", {
             templateUrl: "js/components/blog/blog.html",
             controller: "BlogController"
         })
-        .when("/profile", {
+        .when("/shop", {
+            templateUrl: "js/components/shop/shop.html",
+            controller: "ShopController"
+        })
+        .when("/pricing", {
+            templateUrl: "js/components/pricing/pricing.html",
+            controller: "PricingController"
+        })
+        .when("/about", {
+            templateUrl: "js/components/about/about.html",
+            controller: "AboutController"
+        })
+		.when("/profile", {
             templateUrl: "js/components/profile/profile.html",
             controller: "ProfileController"
         })
-        .otherwise("/", {
-            templateUrl: "js/components/landing-page/landing-page.html",
-            controller: "LandingPageController"
+        .otherwise({
+            redirectTo: "/"
         })
 }]);
