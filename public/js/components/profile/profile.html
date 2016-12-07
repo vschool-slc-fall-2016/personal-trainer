@@ -53,7 +53,7 @@
 
             <div class="form-group">
                 <label for="weight">
-                    <h2>Weight: {{user.weight}}</h2></label>
+                    <h2>Weight (in lbs): {{user.weight}}</h2></label>
                 <h6 ng-hide="profileEdit"></h6>
                 <input ng-show="profileEdit" type="text" id="weight" class="form-control" ng-model="user.weight">
             </div>
@@ -79,11 +79,11 @@
                 <input ng-show="profileEdit" type="text" id="foodAllergies" class="form-control" ng-model="user.foodAllergies">
             </div>
 
-            <div class="profile-buttons">
+            <div>
                 <div>
-                    <button type="button" class="center-block btn btn-primary btn-lg profile-buttons" ng-click="profileEdit = !profileEdit">Edit</button>
-                    <button type="button" class="center-block btn btn-success btn-lg profile-buttons" ng-click="saveProfile(user)">Save</button>
-                    <button type="button" class="center-block btn btn-danger btn-lg profile-buttons" ng-click="deleteProfile(user)">Delete</button>
+                    <button type="button" class="center-block btn btn-primary btn-lg profile-buttons" ng-hide="profileEdit" ng-click="profileEdit = !profileEdit">Edit</button>
+                    <button type="button" class="center-block btn btn-success btn-lg profile-buttons" ng-hide="!profileEdit" ng-click="saveProfile(user)">Save</button>
+                    <button type="button" id="profile-delete-button" class="center-block btn btn-danger btn-lg profile-buttons" ng-hide="profileEdit" ng-click="deleteProfile(user)">Delete</button>
                 </div>
             </div>
         </form>

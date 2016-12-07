@@ -21,3 +21,15 @@
     width: auto;
     margin-top: -2vh;
 }
+
+#profile-delete-button {
+    float: right;
+}
+
+#top-left-cell {
+    border-top: none;
+}
+
+#calendar-header {
+    text-align: center;
+}
