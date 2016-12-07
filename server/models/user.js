@@ -12,7 +12,16 @@ var userSchema = new Schema ({
     password: {
         type: String,
         required: true
-    }
+    },
+    firstName: String,
+    lastName: String,
+    age: Number,
+    gender: String,
+    height: Number, //in inches
+    weight: Number,
+    phoneNumber: Number,
+    address: String,
+    foodAllergies: String
 });
 
 module.exports = mongoose.model("User", userSchema);
