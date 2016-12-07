@@ -26,15 +26,7 @@ app.service("UserService", ["$http", "TokenService", function ($http, TokenServi
     };
     this.isAuthenticated = function () {
         return !!TokenService.getToken();
-    };
-//    this.getUsers = function () {
-//        return $http.get("/auth/users").then(function (response) {
-//            return response.data;
-//        }, function (response) {
-//            console.log("Error " + response.status + ": " + response.statusText);
-//        });
-//    };
-    
+    };   
 }]);
 
 app.service("AuthInterceptor", ["$q", "$location", "TokenService", function ($q, $location, TokenService) {
