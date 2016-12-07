@@ -1,0 +1,23 @@
+.profile-buttons {
+    display: inline;
+    margin-bottom: 2vh;
+}
+
+.col-centered {
+    float: none;
+    margin: 0 auto;
+}
+
+.jumbotron {
+    text-align: center;
+}
+
+.navbar-brand {
+    padding: 0px;
+}
+
+.navbar-brand>img {
+    height: 250%;
+    width: auto;
+    margin-top: -2vh;
+}

@@ -1,74 +1,90 @@
 <div class="row">
+   
+   <div class="container-fluid">
+            <div class="jumbotron">
+                <h1>Your Profile Information</h1>
+            </div>
+        </div>
+   
     <div class="col-md-4 col-md-offset-4">
-        <h1>Your Profile Information</h1>
-        <button type="button" class="center-block btn btn-primary btn-lg" ng-click="profileEdit = !profileEdit">Edit</button>
-
-        <form>
+        <form class=" col-centered">
             <div class="form-group">
-                <label for="firstName">First Name</label>
-                <h6 ng-hide="profileEdit">{{user.firstName}}</h6>
+                <label for="firstName">
+                    <h2>First Name: {{user.firstName}}</h2>
+                    <h6 ng-hide="profileEdit"></h6>
+                </label>
                 <input ng-show="profileEdit" type="text" id="firstName" class="form-control" ng-model="user.firstName">
             </div>
 
             <div class="form-group">
-                <label for="lastName">Last Name</label>
-                <h6 ng-hide="profileEdit">{{user.lastName}}</h6>
+                <label for="lastName">
+                    <h2>Last Name: {{user.lastName}}</h2>
+                </label>
+                <h6 ng-hide="profileEdit"></h6>
                 <input ng-show="profileEdit" type="text" id="lastName" class="form-control" ng-model="user.lastName">
             </div>
 
             <div class="form-group">
-                <label for="age">Age</label>
-                <h6 ng-hide="profileEdit">{{user.age}}</h6>
+                <label for="age">
+                    <h2>Age: {{user.age}}</h2></label>
+                <h6 ng-hide="profileEdit"></h6>
                 <input ng-show="profileEdit" type="number" id="age" class="form-control" ng-model="user.age">
             </div>
 
             <div class="form-group">
-                <label>Gender
-                    <br>
-                    <br>
-                    <h6 ng-hide="profileEdit">{{user.gender}}</h6>
-                    <input ng-show="profileEdit" type="radio" ng-model="user.gender" value="male">
+                <label>
+                    <h2>Gender: {{user.gender}}</h2>
+                    <h6 ng-hide="profileEdit"></h6>
+                    <input ng-show="profileEdit" type="radio" ng-model="user.gender" value="Male">
                     <p ng-show="profileEdit">Male</p>
                 </label>
                 <label>
-                    <input ng-show="profileEdit" type="radio" ng-model="user.gender" value="female">
+                    <input ng-show="profileEdit" type="radio" ng-model="user.gender" value="Female">
                     <p ng-show="profileEdit">Female</p>
                 </label>
             </div>
 
             <div class="form-group">
-                <label for="height">Height (in inches)</label>
-                <h6 ng-hide="profileEdit">{{user.height}}</h6>
+                <label for="height">
+                    <h2>Height (in inches): {{user.height}}</h2></label>
+                <h6 ng-hide="profileEdit"></h6>
                 <input ng-show="profileEdit" type="number" id="height" class="form-control" ng-model="user.height">
             </div>
 
             <div class="form-group">
-                <label for="weight">Weight</label>
-                <h6 ng-hide="profileEdit">{{user.weight}}</h6>
+                <label for="weight">
+                    <h2>Weight: {{user.weight}}</h2></label>
+                <h6 ng-hide="profileEdit"></h6>
                 <input ng-show="profileEdit" type="text" id="weight" class="form-control" ng-model="user.weight">
             </div>
 
             <div class="form-group">
-                <label for="phoneNumber">Phone Number</label>
-                <h6 ng-hide="profileEdit">{{user.phoneNumber}}</h6>
+                <label for="phoneNumber">
+                    <h2>Phone Number: {{user.phoneNumber}}</h2></label>
+                <h6 ng-hide="profileEdit"></h6>
                 <input ng-show="profileEdit" type="number" id="phoneNumber" class="form-control" ng-model="user.phoneNumber">
             </div>
 
             <div class="form-group">
-                <label for="address">Address</label>
-                <h6 ng-hide="profileEdit">{{user.address}}</h6>
+                <label for="address">
+                    <h2>Address: {{user.address}}</h2></label>
+                <h6 ng-hide="profileEdit"></h6>
                 <input ng-show="profileEdit" type="text" id="address" class="form-control" ng-model="user.address">
             </div>
 
             <div class="form-group">
-                <label for="foodAllergies">Food Allergies</label>
-                <h6 ng-hide="profileEdit">{{user.foodAllergies}}</h6>
+                <label for="foodAllergies">
+                    <h2>Food Allergies: {{user.foodAllergies}}</h2></label>
+                <h6 ng-hide="profileEdit"></h6>
                 <input ng-show="profileEdit" type="text" id="foodAllergies" class="form-control" ng-model="user.foodAllergies">
             </div>
 
-            <div id="profile-save-delete">
-                <button type="button" class="center-block btn btn-primary btn-lg" ng-click="saveProfile(user)">Save</button>
-                <button type="button" class="center-block btn btn-primary btn-lg" ng-click="deleteProfile(user)">Delete</button>
+            <div class="profile-buttons">
+                <div>
+                    <button type="button" class="center-block btn btn-primary btn-lg profile-buttons" ng-click="profileEdit = !profileEdit">Edit</button>
+                    <button type="button" class="center-block btn btn-success btn-lg profile-buttons" ng-click="saveProfile(user)">Save</button>
+                    <button type="button" class="center-block btn btn-danger btn-lg profile-buttons" ng-click="deleteProfile(user)">Delete</button>
+                </div>
             </div>
         </form>
     </div>
